@@ -1,42 +1,53 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-     <title>Membuat Login Multi User Level Dengan PHP dan MySQLi -www.malasngoding.com</title>
-     <link rel="stylesheet" type="text/css" href="style.css">
+
+<title>Form Login Multi User www.panduancode.com</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
+
 <body>
 
-      <h1>Membuat Login Multi User Level Dengan PHP dan MySQLi <br/> www.malasngoding.com</h1>
+<h1>Membuat Login Multi User Dengan PHP dan MySQLi<br/>www.panduancode.com</h1>
 
-      <?php 
-      if(isset($_GET['pesan'])){
-          if($_GET['pesan']=="gagal"){
-              echo "<div class='alert'>Username dan Password tidak sesuai !</div>";
-           }
-      }
-      ?>
+<?php 
 
-     <div class="kotak_login">
-          <p class="tulisan_login">Silahkan login</p>
+if(isset($_GET['pesan'])){
 
-          <form action="cek_login.php" method="post">
-             <label>Username</label>
-             <input type="text" name="username" class="form_login" placeholder="Username .." required="required">
+if($_GET['pesan']=="gagal"){
 
-             <label>password</label>
-             <input type="password" name="password" class="form_login" placeholder="Password .." required="required">
+echo "<div class='alert'>Username atau Password tidak sesuai !</div>";
 
-             <input type="submit" class="tombol_login" value="LOGIN">
+}
 
-             <br/>
-             <br/>
-             <center>
-                 <a class="link" href="https://www.malasngoding.com">Kembali</a>
-              </center>
-           </form>
+}
 
-      </div>
+?>
 
+<div class="kotak_login">
 
-  </body>
-  </html>
+<p class="tulisan_login">Silahkan login</p>
+
+<form action="cek_login.php" method="post">
+
+<label>Username</label>
+
+<input type="text" name="username" class="form_login" placeholder="Username .." required="required">
+
+<label>Password</label>
+
+<input type="password" name="password" class="form_login" placeholder="Password .." required="required">
+
+<input type="submit" class="tombol_login" value="LOGIN">
+
+</form>
+
+</div>
+
+</body>
+
+</html>
